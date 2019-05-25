@@ -1,4 +1,5 @@
-//if you want mobile menu goes below navbar then uncomment this code.
+$(function(){
+	//if you want mobile menu goes below navbar then uncomment this code.
 	/*
 	function setMenuTop(){
 		var navOuterHeight = $(".navbar").outerHeight();
@@ -18,4 +19,3 @@
 		$(".hamburger").toggleClass("is-active");
 	});
 });
-
