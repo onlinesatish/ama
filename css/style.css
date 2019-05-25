@@ -1,0 +1,9 @@
+body{
+				padding-top:56px;
+			}
+			mark{
+				font-weight:bolder;background: #ffa;
+			}.navbar-brand{height:50px;padding:.2rem;}
+			.navbar-brand img{height:100%; border:.05rem solid;padding:.15rem;}
+			.screenshot img{width:100%;}
+			
