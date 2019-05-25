@@ -8,12 +8,14 @@
 		margin:auto;
 		transform: translateX(-100%);
 		transition:all ease .25s;
+		max-width:250px;
 	}
 	.mobileMenu.onRight{
 		left:auto;
 		right:0;
 		transform:translateX(100%);
 	}
+	.mobileMenu img{width:50%;}
 	.mobileMenu.open{
 		transform: translateX(0);
 		overflow-y:auto;
