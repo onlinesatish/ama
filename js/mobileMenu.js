@@ -16,6 +16,6 @@ $(function(){
 	
 	$(".navbar-toggler, .overlay").on("click", function(){
 		$(".mobileMenu, .overlay").toggleClass("open");
-		$(".hamburger").toggleClass("is-active");
+		$(".navbar-toggler").toggleClass("is-active");
 	});
 });
