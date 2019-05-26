@@ -31,11 +31,11 @@ function handleTouchMove(evt) {
 		if ( xDiff > 0 ) {
 			/* left swipe */ 
 			$(".mobileMenu, .overlay").removeClass("open");
-			$(".hamburger").removeClass("is-active");
+			$(".navbar-toggler").removeClass("is-active");
 		} else if(xDown < 10 && xDiff < 0){
 			/* right swipe */
 			$(".mobileMenu, .overlay").addClass("open");
-			$(".hamburger").addClass("is-active");
+			$(".navbar-toggler").addClass("is-active");
 		}                       
 	}
 	
