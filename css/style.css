@@ -4,7 +4,7 @@ header {overflow-x:hidden;}
 main {overflow-x:hidden;}
 footer {overflow-x:hidden;}
 mark{font-weight:bolder;background: #ffa;}
-.navbar-brand{height:50px;padding:0;}
-.navbar-brand img{height:100%; border:.05rem solid;padding:.2rem;}
+.navbar-brand{height:50px;}
+.navbar-brand img{height:100%;}
 .screenshot img{width:100%;}
 #dropdownMenu{font-size:1.5rem;}
