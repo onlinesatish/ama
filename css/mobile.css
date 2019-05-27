@@ -1,6 +1,8 @@
 @media (max-width:768px){
-*{margin:0;padding:0;}
+	*{margin:0;padding:0;}
+	.navbar{z-index:998;}
 	.mobileMenu{
+		z-index:999;
 		position:fixed;
 		top:0;/* set by js*/
 		bottom:0;
