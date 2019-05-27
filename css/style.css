@@ -1,5 +1,10 @@
-body{padding-top:56px;}
+*{margin:0;padding:0;}
+body{padding-top:56px; overflow-x:hidden;}
+header {overflow-x:hidden;}
+main {overflow-x:hidden;}
+footer {overflow-x:hidden;}
 mark{font-weight:bolder;background: #ffa;}
-.navbar-brand{height:50px;padding:.2rem;}
-.navbar-brand img{height:100%; border:.05rem solid;padding:.15rem;}
+.navbar-brand{height:50px;padding:0;}
+.navbar-brand img{height:100%; border:.05rem solid;padding:.2rem;}
 .screenshot img{width:100%;}
+#dropdownMenu{font-size:1.5rem;}
