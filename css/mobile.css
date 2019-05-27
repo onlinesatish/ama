@@ -1,6 +1,6 @@
 @media (max-width:768px){
 	*{margin:0;padding:0;}
-	.navbar{z-index:998;}
+	.navbar{z-index:997;}
 	.mobileMenu{
 		z-index:999;
 		position:fixed;
@@ -34,6 +34,7 @@
 	}
 	.overlay.open{
 		display:block;
+		z-index:998;
 	}
 	.nav-link{padding-left:25px !important;}
 }
