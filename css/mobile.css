@@ -1,5 +1,5 @@
 @media (max-width:768px){
-	.navbar{z-index:999;}
+*{margin:0;padding:0;}
 	.mobileMenu{
 		position:fixed;
 		top:0;/* set by js*/
@@ -8,19 +8,18 @@
 		margin:auto;
 		transform: translateX(-100%);
 		transition:all ease .25s;
-		max-width:250px;
+		max-width:280px;
 	}
 	.mobileMenu.onRight{
 		left:auto;
 		right:0;
 		transform:translateX(100%);
 	}
-	.mobileMenu img{width:50%;}
+	.mobileMenu img{width:80%;}
 	.mobileMenu.open{
 		transform: translateX(0);
 		overflow-y:auto;
 		box-shadow:2px 5px 5px grey;
-		z-index:998;
 	}
 	.overlay{
 		position:fixed;
@@ -34,5 +33,6 @@
 	.overlay.open{
 		display:block;
 	}
+	.nav-link{padding-left:25px !important;}
 }
 		
