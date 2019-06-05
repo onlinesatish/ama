@@ -17,7 +17,7 @@
 		right:0;
 		transform:translateX(100%);
 	}
-	.mobileMenu img{width:80%;}
+	.mobileMenu img{width:80%;image-rendering:;}
 	.mobileMenu.open{
 		transform: translateX(0);
 		overflow-y:auto;
@@ -34,7 +34,6 @@
 	}
 	.overlay.open{
 		display:block;
-		z-index:998;
 	}
 	.nav-link{padding-left:25px !important;}
 }
