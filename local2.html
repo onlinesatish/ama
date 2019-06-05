@@ -61,26 +61,32 @@
 		</style>
 	</head>
 	<body
-	data-menu-over-nav="true"
-	data-menu-side="right"
+	data-menu_under_nav="false"
+	data-menu_side="left"
+	data-brand_side="left"
 	>
+	<!-- Default Setting
+	data-menu_under_nav="false"
+	data-menu_side="left"
+	data-brand_side="left"
+	-->
 	
 	<header>
 	<!--Navbar-->
 	<nav class="navbar navbar-expand-md p-0 navbar-light fixed-top white justify-content-sm-start">
 	
 	  <!-- Navbar brand -->
-	  <a class="navbar-brand order-0 my-0 p-0 p-md-1 order-md-0 ml-md-0 ml-2 mr-auto" href="#">
+	  <a class="navbar-brand order-0 my-0 p-0 p-md-1 order-md-0 ml-md-0 ml-2" href="#">
 	  <img style="padding:.15rem;"  class=" border"  src="img/amaLogo.png" >
 	   </a>
 		
-		<button class="navbar-toggler mt-1 align-self-start hamburger hamburger--arrowalt" type="button">
+		<button class="navbar-toggler mt-1 align-self-start hamburger " type="button">
 			<span class="hamburger-box">
 			<span class="hamburger-inner"></span>
 			</span>
 		</button>
 	  <!-- Menu content -->
-	  <div class="mt-md-0 pt-2 p-md-0 d-flex flex-column flex-md-row flex-lg-row justify-content-md-end navbar-collapse mobileMenu  white" id="basicExampleNav">
+	  <div class="mt-md-0 pt-2 p-md-0 d-flex flex-column flex-md-row flex-lg-row justify-content-md-end navbar-collapse mobileMenu white" id="basicExampleNav">
 		<img class="d-md-none mb-2 shadow-sm border p-1" src="img/amaLogo.png" alt="Anshu Memorial Academy Logo" >
 	
 	    <!-- Links -->
@@ -155,18 +161,9 @@
 		var overlay = document.createElement('div');
 		overlay.classList = "overlay";
 		
-		//var menuOverNav = document.querySelector("body").getAttribute("data-menu-over-nav");
-		//var menuSide = document.querySelector("body").getAttribute("data-menu-side");
-		var menuOverNav = document.querySelector("body").getAttribute("data-menu-over-nav");
-		var menuSide = document.querySelector("body").getAttribute("data-menu-side");
-		if(menuOverNav==="true"){
-		//menu over navigation
-		alert('data-menu-over-nav="true"');
-		//document.getElementById("nav").appendChild(overlay);
-		document.getElementsByTagName("nav")[0].appendChild(overlay);
-		}else if(menuOverNav==="false"){
+		var menu_under_nav = document.querySelector("body").getAttribute("data-menu_under_nav");
+		if(menu_under_nav==="true"){
 		//menu under navigation
-		alert('data-menu-over-nav="false"');
 		//function setMenuTop(){
 			var navOuterHeight = $(".navbar").outerHeight();
 			$(".mobileMenu").css("top", navOuterHeight);
@@ -174,23 +171,43 @@
 		//}
 		}else {
 		//menu under navigation
-		alert('"data-menu-over-nav" value is invalid.' );
+		document.getElementsByTagName("nav")[0].appendChild(overlay);
 		}
 		
 		
 		
 		
+		//menu side
+		var menu_side = document.querySelector("body").getAttribute("data-menu_side");
+		if(menu_side==="right"){
+		$(".mobileMenu").addClass("onRight");
+		$(".navbar-toggler").addClass("hamburger--arrowalt-r");
+		} else {
+		$(".navbar-toggler").addClass("hamburger--arrowalt");
+		}
 		
-		
-		if(menuSide==="left"){
+		/*/toggler side
+		var toggler_side = document.querySelector("body").getAttribute("data-toggler_side");
+		if(toggler_side==="left"){
 		//menu side left
-		alert('data-menu-side="left"');
-		}else if(menuSide==="right"){
-		//menu side right
-		alert('data-menu-side="right"');
+		$(".navbar-brand").addClass("order-1")
+		alert('data-toggler_side="left"');
 		}else{
-		alert('"data-menu-side" value didn\'t set or, set invalid parameter in body ')
+		$(".navbar-brand").addClass("order-0")
+		}*/
+		
+		
+		//brand side
+		var brand_side = document.querySelector("body").getAttribute("data-brand_side");
+		if(brand_side==="right"){
+		//menu side left
+		$(".navbar-brand").addClass("ml-auto, order-1")
+		//$(".navbar-brand").addClass("order-1")
+		}else{
+		$(".navbar-brand").addClass("mr-auto, order-0")
+		//$(".navbar-brand").addClass("order-0")
 		}
+		
 		//var nav = document.getElementById("nav");
 		//nav.insertBefore(overlay, nav.childNodes[0]);
 		
