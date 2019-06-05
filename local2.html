@@ -62,12 +62,12 @@
 	</head>
 	<body
 	data-menu-over-nav="true"
-	data-menu-side="righ"
+	data-menu-side="right"
 	>
 	
-	<header id="hdr" >
+	<header>
 	<!--Navbar-->
-	<nav id="nav"  class="navbar navbar-expand-md p-0 navbar-light fixed-top white justify-content-sm-start">
+	<nav class="navbar navbar-expand-md p-0 navbar-light fixed-top white justify-content-sm-start">
 	
 	  <!-- Navbar brand -->
 	  <a class="navbar-brand order-0 my-0 p-0 p-md-1 order-md-0 ml-md-0 ml-2 mr-auto" href="#">
@@ -161,12 +161,12 @@
 		var menuSide = document.querySelector("body").getAttribute("data-menu-side");
 		if(menuOverNav==="true"){
 		//menu over navigation
-		alert('menuOverNav==="true"');
+		alert('data-menu-over-nav="true"');
 		//document.getElementById("nav").appendChild(overlay);
 		document.getElementsByTagName("nav")[0].appendChild(overlay);
 		}else if(menuOverNav==="false"){
 		//menu under navigation
-		alert('menuOverNav==="false"');
+		alert('data-menu-over-nav="false"');
 		//function setMenuTop(){
 			var navOuterHeight = $(".navbar").outerHeight();
 			$(".mobileMenu").css("top", navOuterHeight);
@@ -184,10 +184,10 @@
 		
 		if(menuSide==="left"){
 		//menu side left
-		alert('menuSide==="left"');
+		alert('data-menu-side==="left"');
 		}else if(menuSide==="right"){
 		//menu side right
-		alert('menuSide==="right"');
+		alert('data-menu-side==="right"');
 		}else{
 		alert('"data-menu-side" value didn\'t set or, set invalid parameter in body ')
 		}
