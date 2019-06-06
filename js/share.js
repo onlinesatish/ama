@@ -9,7 +9,7 @@
         //Web share API
         navigator.share({
           title: document.title,
-          text: 'Anshu Memorial Academy (AMA)',
+          text: '', //'Anshu Memorial Academy (AMA)',
           url: window.location.href
         })
         .then(function() {
