@@ -50,9 +50,9 @@ if(menu_side==="right"){
 var brand_side = document.querySelector("body").getAttribute("data-brand_side");
 if(brand_side==="right"){
 	//menu side left
-	$(".navbar-brand").addClass("ml-auto, order-1")
+	$(".navbar-brand").addClass("ml-auto order-1")
 }else{
-	$(".navbar-brand").addClass("mr-auto, order-0")
+	$(".navbar-brand").addClass("mr-auto order-0")
 }
 
 
