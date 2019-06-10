@@ -139,3 +139,17 @@ function handleTouchMove(evt) {
 	xDown = null;
 	yDown = null;                                             
 };
+
+/*
+|---------------------------------------
+| Content Under Nav js
+|---------------------------------------
+*/
+function contentUnderNav(){
+	if(document.querySelector("nav").classList.contains("fixed-top") && document.querySelector("nav").classList.contains("_content_under_nav")){
+		document.body.style.paddingTop = (document.querySelector("nav").clientHeight-.17)+"px";
+	}
+}
+contentUnderNav();
+
+
