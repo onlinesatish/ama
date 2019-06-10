@@ -1,3 +1,8 @@
+/* c-hamburger.css */
+:root{
+--hamburger-color:#000;
+}
+
 .hamburger {
 	padding: 15px 15px;
 	display: inline-block;
@@ -22,7 +27,7 @@
 	.hamburger.is-active .hamburger-inner,
 	.hamburger.is-active .hamburger-inner::before,
 	.hamburger.is-active .hamburger-inner::after {
-	background-color: #000; 
+	background-color: var(--hamburger-color); 
 }
 	
 .hamburger-box {
@@ -40,7 +45,7 @@
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
 	width: 30px;
 	height: 2px;
-	background-color: #000;
+	background-color: var(--hamburger-color);
 	border-radius: 4px;
 	position: absolute;
 	transition-property: transform;
