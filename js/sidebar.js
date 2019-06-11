@@ -10,7 +10,6 @@ var menu_under_nav = document.querySelector("body").getAttribute("data-menu_unde
 //if(menu_under_nav==="true"){
 if(document.querySelector("nav").classList.contains("fixed-top") && document.querySelector("nav").classList.contains("_menu_under_nav")){
 //menu under navigation
-alert('menu under nav')
 function setMenuTop(){
 	var navOuterHeight = document.querySelector(".navbar").offsetHeight;
 	document.querySelector(".mobileMenu").style.top = (navOuterHeight - .17) + "px";
@@ -25,10 +24,8 @@ function setMenuTop(){
 
 	//document.getElementsByTagName("BODY")[0].appendChild(overlay);
 	document.body.appendChild(overlay);
-	alert('ho')
 }else if(document.querySelector("nav").classList.contains("fixed-top") && document.querySelector("nav").classList.contains("_menu_over_nav")){
 //menu under navigation
-alert('menu over nav')
 document.getElementsByTagName("nav")[0].appendChild(overlay);
 }
 
