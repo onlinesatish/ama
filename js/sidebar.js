@@ -1,14 +1,16 @@
 /*
 |---------------------------------------
-| Overlay js
+| Menu & Overlay js
 |---------------------------------------
 */
 var overlay = document.createElement('div');
 overlay.classList = "overlay";
 
 var menu_under_nav = document.querySelector("body").getAttribute("data-menu_under_nav");
-if(menu_under_nav==="true"){
+//if(menu_under_nav==="true"){
+if(document.querySelector("nav").classList.contains("fixed-top") && document.querySelector("nav").classList.contains("_menu_under_nav")){
 //menu under navigation
+alert('menu under nav')
 function setMenuTop(){
 	var navOuterHeight = document.querySelector(".navbar").offsetHeight;
 	document.querySelector(".mobileMenu").style.top = (navOuterHeight - .17) + "px";
@@ -21,9 +23,12 @@ function setMenuTop(){
 		setMenuTop();
 	});
 
-	document.getElementsByTagName("BODY")[0].appendChild(overlay);
-}else {
+	//document.getElementsByTagName("BODY")[0].appendChild(overlay);
+	document.body.appendChild(overlay);
+	alert('ho')
+}else if(document.querySelector("nav").classList.contains("fixed-top") && document.querySelector("nav").classList.contains("_menu_over_nav")){
 //menu under navigation
+alert('menu over nav')
 document.getElementsByTagName("nav")[0].appendChild(overlay);
 }
 
@@ -62,10 +67,21 @@ if(brand_side==="right"){
 | Open & Close Mobile Menu
 |---------------------------------------
 */
-document.querySelector(".navbar-toggler, .overlay").addEventListener("click", function(){
-	document.querySelector(".mobileMenu, .overlay").classList.toggle("open");
+/*$(".navbar-toggler, .overlay").on("click", function(){
+	$(".mobileMenu, .overlay").toggleClass("open");
+	$(".navbar-toggler").toggleClass("is-active");
+});*/
+document.querySelectorAll(".navbar-toggler, .overlay")[0].addEventListener("click", function(){
+	document.querySelector(".overlay").classList.toggle("open");
+	document.querySelector(".mobileMenu").classList.toggle("open");
 	document.querySelector(".navbar-toggler").classList.toggle("is-active");
 });
+document.querySelectorAll(".overlay")[0].addEventListener("click", function(){
+	document.querySelector(".overlay").classList.toggle("open");
+	document.querySelector(".mobileMenu").classList.toggle("open");
+	document.querySelector(".navbar-toggler").classList.toggle("is-active");
+});
+
 
 
 
