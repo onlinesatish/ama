@@ -96,13 +96,54 @@
 		<!-- General CSS -->
 		<link rel="stylesheet" href="css/style.css?v1.0" />
 		<style type="text/css">
+		
+		.preloader{
+		position:fixed;
+		top:0;
+		bottom:0;
+		left:0;
+		right:0;
+		z-index:9876543210;
+		background-color: #2a2a72;
+		background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+		display:flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items:center;
+		transition:all 2s ;
+		}
+		.preloader p{
+		bordr:1px solid;
+		margin-top: -50px !important;
+		color:#fff;
+		}
+		._preloader-hide{display:none;}
+		.preloader p:nth-child(1){
+		font-size:7.75rem;
+		font-weight:bold;
+		text-shadow:0 0 60px #000, 0 0 100px #000;
+		}
+		.preloader p:nth-child(2){
+		font-size:1.7rem;
+		text-shadow:2px 3px 5px #000;
+		}
+		
 		</style>
+		<script type="text/javascript">
+		window.onload = preloader;
+		function preloader(){
+		document.querySelector(".preloader").classList.add("_preloader-hide");
+		}
+		</script>
 	</head>
 	<body class="black" data-menu_side="right">
 	<!-- Default Setting
 	<body data-menu_under_nav="false" data-menu_side="left" data-brand_side="left">
 	-->
-	
+	<div class="preloader" >
+	<p class="" >AMA</p>
+	<p>www.anshumemorial.in</p>
+	</div>
 	<header>
 	<!--Navbar-->
 	<nav class="_content_under_nav _menu_under_nav navbar navbar-expand-md p-0 navbar-light fixed-top white justify-content-sm-start">
@@ -188,9 +229,6 @@
 		<script src="js/protect-img.js?v1.0.0"></script>
 		<!-- Share JavaScript -->
 		<script src="js/share.js?v1.0.0"></script>
-		<script type="text/javascript">
 		
-		
-		</script>
 	</body>
 </html>
