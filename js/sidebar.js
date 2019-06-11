@@ -71,6 +71,8 @@ if(brand_side==="right"){
 	$(".mobileMenu, .overlay").toggleClass("open");
 	$(".navbar-toggler").toggleClass("is-active");
 });*/
+
+
 document.querySelectorAll(".navbar-toggler, .overlay")[0].addEventListener("click", function(){
 	document.querySelector(".overlay").classList.toggle("open");
 	document.querySelector(".mobileMenu").classList.toggle("open");
@@ -124,11 +126,13 @@ function handleTouchMove(evt) {
 	if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
 		if ( xDiff > 0 ) {
 			/* left swipe */ 
-			document.querySelector(".mobileMenu, .overlay").classList.remove("open");
+			document.querySelector(".mobileMenu").classList.remove("open");
+			document.querySelector(".overlay").classList.remove("open");
 			document.querySelector(".navbar-toggler").classList.remove("is-active");
 		} else if(xDown < 10 && xDiff < 0){
 			/* right swipe */
-			document.querySelector(".mobileMenu, .overlay").classList.add("open");
+			document.querySelector(".mobileMenu").classList.add("open");
+			document.querySelector(".overlay").classList.add("open");
 			document.querySelector(".navbar-toggler").classList.add("is-active");
 		}                       
 	}
